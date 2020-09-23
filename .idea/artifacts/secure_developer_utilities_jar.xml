@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="secure-developer-utilities:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/secure_developer_utilities_jar</output-path>
+    <root id="archive" name="secure-developer-utilities.jar">
+      <element id="module-output" name="secure-developer-utilities" />
+    </root>
+  </artifact>
+</component>
