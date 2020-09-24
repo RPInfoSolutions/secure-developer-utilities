@@ -1,46 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.secure.dev.utilities.App">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="604" height="400"/>
+      <xy x="20" y="20" width="915" height="1755"/>
     </constraints>
     <properties/>
-    <border type="none"/>
+    <border type="none">
+      <title-color color="-5743083"/>
+    </border>
     <children>
-      <vspacer id="2f75e">
+      <splitpane id="966d7">
         <constraints>
-          <grid row="1" column="1" row-span="2" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </vspacer>
-      <component id="d1daf" class="javax.swing.JButton" binding="decodeURLButton" default-binding="true">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Decode URL"/>
-        </properties>
-      </component>
-      <component id="25425" class="javax.swing.JButton" binding="encodeURLButton" default-binding="true">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Encode URL"/>
-        </properties>
-      </component>
-      <component id="f2405" class="javax.swing.JTextArea" binding="pasteURLTextArea" default-binding="true">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <minimum-size width="200" height="100"/>
-            <preferred-size width="600" height="200"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="800" height="400"/>
           </grid>
         </constraints>
         <properties>
-          <font size="14"/>
-          <text value="Paste URL"/>
+          <dividerLocation value="277"/>
+          <dividerSize value="10"/>
         </properties>
-      </component>
+        <border type="none"/>
+        <children>
+          <scrollpane id="3ce5">
+            <constraints>
+              <splitpane position="left"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="8587e" class="javax.swing.JList" binding="list1" default-binding="true">
+                <constraints/>
+                <properties>
+                  <font size="14"/>
+                  <model>
+                    <item value="URL Encoder/Decoder"/>
+                    <item value="Base64 Encoder/Decoder"/>
+                    <item value=""/>
+                    <item value="XML to JSON Converter"/>
+                    <item value="JSON to XML Converter"/>
+                    <item value="CSV to XML Converter"/>
+                    <item value="CSV to JSON Converter"/>
+                    <item value="Epoch Timestamp To Date"/>
+                    <item value=""/>
+                    <item value="JSON Formatter"/>
+                    <item value="XML Formatter"/>
+                    <item value=""/>
+                    <item value="JSON Validator"/>
+                    <item value="HTML Validator"/>
+                    <item value="XML Validator (XSD)"/>
+                    <item value="XPath Tester"/>
+                    <item value="RegEx Tester"/>
+                    <item value="Cron Expression Generator"/>
+                    <item value=""/>
+                    <item value="HTML Escape"/>
+                    <item value="XML Escape"/>
+                    <item value="Java and .Net Escape"/>
+                    <item value="JavaScript Escape"/>
+                    <item value="JSON Escape"/>
+                    <item value="CSV Escape"/>
+                    <item value="SQL Escape"/>
+                    <item value=""/>
+                    <item value="Message Digester (MD5, SHA-256, SHA-512)"/>
+                    <item value="HMAC Generator"/>
+                    <item value="MD5 Generator"/>
+                    <item value="SHA-256 Generator"/>
+                    <item value="SHA-512 Generator"/>
+                    <item value="Network Ninja"/>
+                  </model>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <grid id="c152c" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <splitpane position="right"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="1377b" class="javax.swing.JTextArea" binding="textArea">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-775"/>
+                  <font size="14"/>
+                  <lineWrap value="true"/>
+                  <text value="Paste Here ..."/>
+                </properties>
+              </component>
+              <vspacer id="6bc63">
+                <constraints>
+                  <grid row="1" column="1" row-span="2" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="6bc48" class="javax.swing.JButton" binding="decodeUrlButton">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Decode URL"/>
+                </properties>
+              </component>
+              <component id="a80bf" class="javax.swing.JButton" binding="encodeUrlButton">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Encode URL"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </splitpane>
     </children>
   </grid>
 </form>

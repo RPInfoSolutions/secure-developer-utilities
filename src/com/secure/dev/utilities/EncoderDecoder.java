@@ -1,4 +1,4 @@
-package com.secure.dev.utilities.url;
+package com.secure.dev.utilities;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
@@ -7,7 +7,7 @@ import java.nio.charset.StandardCharsets;
 
 public class EncoderDecoder {
 
-    public static String encodeValue(String value) {
+    public static String encodeUrlValue(String value) {
         try {
             return URLEncoder.encode(value, StandardCharsets.UTF_8.toString());
         } catch (UnsupportedEncodingException e) {
@@ -16,7 +16,7 @@ public class EncoderDecoder {
         return value;
     }
 
-    public static String decodeValue(String value) {
+    public static String decodeUrlValue(String value) {
         try {
             return URLDecoder.decode(value, StandardCharsets.UTF_8.toString());
         } catch (UnsupportedEncodingException e) {
