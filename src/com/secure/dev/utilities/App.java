@@ -59,6 +59,18 @@ public class App {
                 }
             }
         });
+        encodeToBase64Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                base64Area.setText(EncoderDecoder.encodeToBase64(base64Area.getText()));
+            }
+        });
+        decodeFromBase64Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                base64Area.setText(EncoderDecoder.decodeFromBase64(base64Area.getText()));
+            }
+        });
     }
 
     public static void main(String[] args) {
