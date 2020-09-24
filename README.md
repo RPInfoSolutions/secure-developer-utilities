@@ -13,42 +13,42 @@ and so on...
 # Roadmap of tools release
 
 ### Encoder/Decoder
-- URL Encoder/Decoder
-- Base64 Encoder/Decoder
+- [x] URL Encoder/Decoder
+- [x] Base64 Encoder/Decoder
 
 ### Converters
-- XML to JSON Converter
-- JSON to XML Converter
-- CSV to XML Converter
-- CSV to JSON Converter
-- Epoch Timestamp To Date
+- [ ] XML to JSON Converter
+- [ ] JSON to XML Converter
+- [ ] CSV to XML Converter
+- [ ] CSV to JSON Converter
+- [ ] Epoch Timestamp To Date
 
 ### Formatters/Beautifiers
-- JSON Formatter
-- XML Formatter
+- [ ] JSON Formatter
+- [ ] XML Formatter
 
 ### Validators
-- JSON Validator
-- HTML Validator
-- XML Validator (XSD)
-- XPath Tester
-- RegEx Tester
-- Cron Expression Generator
+- [ ] JSON Validator
+- [ ] HTML Validator
+- [ ] XML Validator (XSD)
+- [ ] XPath Tester
+- [ ] RegEx Tester
+- [ ] Cron Expression Generator
 
 ### String Utilities
-- String Utilities
-- HTML Escape
-- XML Escape
-- Java and .Net Escape
-- JavaScript Escape
-- JSON Escape
-- CSV Escape
-- SQL Escape
+- [ ] String Utilities
+- [ ] HTML Escape
+- [ ] XML Escape
+- [ ] Java and .Net Escape
+- [ ] JavaScript Escape
+- [ ] JSON Escape
+- [ ] CSV Escape
+- [ ] SQL Escape
 
 ### Cryptography
-- Message Digester (MD5, SHA-256, SHA-512)
-- HMAC Generator
-- MD5 Generator
-- SHA-256 Generator
-- SHA-512 Generator
-- Network Ninja
+- [ ] Message Digester (MD5, SHA-256, SHA-512)
+- [ ] HMAC Generator
+- [ ] MD5 Generator
+- [ ] SHA-256 Generator
+- [ ] SHA-512 Generator
+- [ ] Network Ninja
