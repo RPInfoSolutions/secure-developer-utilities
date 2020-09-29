@@ -15,4 +15,7 @@ public class Converter {
         return XML.toJSONObject(value, true).toString(2);
     }
 
+    public static String convertEpochTimestampToDate(long timestamp) {
+        return new java.util.Date((long)timestamp*1000).toString();
+    }
 }
