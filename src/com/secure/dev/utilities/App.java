@@ -19,6 +19,12 @@ public class App {
     private JPanel switchPanel;
     private JButton decodeFromBase64Button;
     private JTextArea base64Area;
+    private JPanel jsonToXmlConverterPanel;
+    private JButton convertToXML;
+    private JTextArea jsonToXmlTextArea;
+    private JButton convertToJSONButton;
+    private JPanel xmlToJsonConverter;
+    private JTextArea xmlToJsonTextArea;
 
     public App() {
 
@@ -51,6 +57,14 @@ public class App {
                             layout.show(switchPanel, "Card2");
                             break;
                         }
+                        case "JSON To XML Converter": {
+                            layout.show(switchPanel, "Card3");
+                            break;
+                        }
+                        case "XML To JSON Converter": {
+                            layout.show(switchPanel, "Card4");
+                            break;
+                        }
                         default: {
                             /*urlEncoderDecoder.setVisible(false);*/
                         }
@@ -69,6 +83,18 @@ public class App {
             @Override
             public void actionPerformed(ActionEvent e) {
                 base64Area.setText(EncoderDecoder.decodeFromBase64(base64Area.getText()));
+            }
+        });
+        convertToXML.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jsonToXmlTextArea.setText(Converter.convertJsonToXml(jsonToXmlTextArea.getText()));
+            }
+        });
+        convertToJSONButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                xmlToJsonTextArea.setText(Converter.convertXmlToJson(xmlToJsonTextArea.getText()));
             }
         });
     }

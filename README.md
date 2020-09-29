@@ -17,8 +17,8 @@ and so on...
 - [x] Base64 Encoder/Decoder
 
 ### Converters
-- [ ] XML to JSON Converter
-- [ ] JSON to XML Converter
+- [x] XML to JSON Converter
+- [x] JSON to XML Converter
 - [ ] CSV to XML Converter
 - [ ] CSV to JSON Converter
 - [ ] Epoch Timestamp To Date
