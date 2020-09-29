@@ -25,6 +25,9 @@ public class App {
     private JButton convertToJSONButton;
     private JPanel xmlToJsonConverter;
     private JTextArea xmlToJsonTextArea;
+    private JTextArea epochTimestampToDateTextArea;
+    private JButton epochTimestampToDateButton;
+    private JPanel epochTimestampToDate;
 
     public App() {
 
@@ -40,6 +43,7 @@ public class App {
                 urlEncoderDecoderArea.setText(EncoderDecoder.encodeUrlValue(urlEncoderDecoderArea.getText()));
             }
         });
+
         list1.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
@@ -63,6 +67,26 @@ public class App {
                         }
                         case "XML To JSON Converter": {
                             layout.show(switchPanel, "Card4");
+                            break;
+                        }
+                        case "CSV To XML Converter": {
+                            layout.show(switchPanel, "Card5");
+                            break;
+                        }
+                        case "XML TO CSV Converter": {
+                            layout.show(switchPanel, "Card6");
+                            break;
+                        }
+                        case "CSV To JSON Converter": {
+                            layout.show(switchPanel, "Card7");
+                            break;
+                        }
+                        case "JSON To CSV Converter": {
+                            layout.show(switchPanel, "Card8");
+                            break;
+                        }
+                        case "Epoch Timestamp To Date": {
+                            layout.show(switchPanel, "Card9");
                             break;
                         }
                         default: {

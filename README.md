@@ -19,8 +19,6 @@ and so on...
 ### Converters
 - [x] XML to JSON Converter
 - [x] JSON to XML Converter
-- [ ] CSV to XML Converter
-- [ ] CSV to JSON Converter
 - [ ] Epoch Timestamp To Date
 
 ### Formatters/Beautifiers
@@ -40,7 +38,6 @@ and so on...
 - [ ] HTML Escape
 - [ ] XML Escape
 - [ ] Java and .Net Escape
-- [ ] JavaScript Escape
 - [ ] JSON Escape
 - [ ] CSV Escape
 - [ ] SQL Escape

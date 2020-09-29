@@ -14,4 +14,5 @@ public class Converter {
     public static String convertXmlToJson(String value) {
         return XML.toJSONObject(value, true).toString(2);
     }
+
 }
