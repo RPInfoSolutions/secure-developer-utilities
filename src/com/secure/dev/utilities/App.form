@@ -42,7 +42,9 @@
                     <item value="Epoch Timestamp To Date"/>
                     <item value=""/>
                     <item value="JSON Formatter"/>
+                    <item value="JSON Minifier"/>
                     <item value="XML Formatter"/>
+                    <item value="XML Minifier"/>
                     <item value=""/>
                     <item value="JSON Validator"/>
                     <item value="HTML Validator"/>
@@ -248,6 +250,67 @@
                     <properties>
                       <font size="14"/>
                       <text value="Epoch Timestamp To Date"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="39f50" binding="jsonFormatter" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <card name="Card6"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="95693" class="javax.swing.JTextArea" binding="jsonFormatterTextArea">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-775"/>
+                      <font size="14"/>
+                      <lineWrap value="true"/>
+                    </properties>
+                  </component>
+                  <component id="867b" class="javax.swing.JButton" binding="formatJSONButton" default-binding="true">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="14"/>
+                      <text value="Format JSON"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="ac84f" binding="jsonMinifier" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <card name="Card7"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="ce0d5" class="javax.swing.JTextArea" binding="jsonMinifiertextArea">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-775"/>
+                      <font size="14"/>
+                      <lineWrap value="true"/>
+                    </properties>
+                  </component>
+                  <component id="2f07f" class="javax.swing.JButton" binding="minifyJSONButton" default-binding="true">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Minify JSON"/>
                     </properties>
                   </component>
                 </children>

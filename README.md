@@ -19,11 +19,13 @@ and so on...
 ### Converters
 - [x] XML to JSON Converter
 - [x] JSON to XML Converter
-- [ ] Epoch Timestamp To Date
+- [x] Epoch Timestamp To Date
 
 ### Formatters/Beautifiers
-- [ ] JSON Formatter
-- [ ] XML Formatter
+- [x] JSON Formatter
+- [x] JSON Minifier
+- [x] XML Formatter
+- [x] XML Minifier
 
 ### Validators
 - [ ] JSON Validator

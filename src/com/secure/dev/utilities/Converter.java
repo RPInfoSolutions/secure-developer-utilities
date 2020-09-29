@@ -18,4 +18,12 @@ public class Converter {
     public static String convertEpochTimestampToDate(long timestamp) {
         return new java.util.Date((long)timestamp*1000).toString();
     }
+
+    public static String formatJson(String value) {
+        return new JSONObject(value).toString(4);
+    }
+
+    public static String minifyJson(String value) {
+        return new JSONObject(value).toString(0);
+    }
 }

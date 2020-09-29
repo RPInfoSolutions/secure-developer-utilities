@@ -28,6 +28,12 @@ public class App {
     private JTextArea epochTimestampToDateTextArea;
     private JButton epochTimestampToDateButton;
     private JPanel epochTimestampToDate;
+    private JPanel jsonFormatter;
+    private JTextArea jsonFormatterTextArea;
+    private JButton formatJSONButton;
+    private JTextArea jsonMinifiertextArea;
+    private JButton minifyJSONButton;
+    private JPanel jsonMinifier;
 
     public App() {
 
@@ -73,6 +79,14 @@ public class App {
                             layout.show(switchPanel, "Card5");
                             break;
                         }
+                        case "JSON Formatter": {
+                            layout.show(switchPanel, "Card6");
+                            break;
+                        }
+                        case "XML Formatter": {
+                            layout.show(switchPanel, "Card7");
+                            break;
+                        }
                         default: {
                             /*urlEncoderDecoder.setVisible(false);*/
                         }
@@ -109,6 +123,18 @@ public class App {
             @Override
             public void actionPerformed(ActionEvent e) {
                 epochTimestampToDateTextArea.setText(Converter.convertEpochTimestampToDate(Long.parseLong(epochTimestampToDateTextArea.getText())));
+            }
+        });
+        formatJSONButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jsonFormatterTextArea.setText(Converter.formatJson(jsonFormatterTextArea.getText()));
+            }
+        });
+        minifyJSONButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jsonMinifiertextArea.setText(Converter.minifyJson(jsonMinifiertextArea.getText()));
             }
         });
     }
