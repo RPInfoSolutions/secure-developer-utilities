@@ -50,6 +50,10 @@ public class App {
     private JTextArea jsonValidatorTextArea;
     private JButton validateJSONButton;
     private JTextArea jsonValidatorSchemaTextArea;
+    private JPanel xmlXsdValidator;
+    private JTextArea xmlValidatorTextArea;
+    private JTextArea xmlXsdValidatorTextArea;
+    private JButton validateXMLButton;
 
     public App() {
 
@@ -113,6 +117,10 @@ public class App {
                         }
                         case "JSON Validator": {
                             layout.show(switchPanel, "Card10");
+                            break;
+                        }
+                        case "XML Validator (XSD)": {
+                            layout.show(switchPanel, "Card11");
                             break;
                         }
                         default: {
@@ -194,6 +202,18 @@ public class App {
                 }
                 catch (Exception ex){
                     showMessageDialog(null, "Oops, INVALID JSON.. please check stacktrace \n\n " + ex.getMessage());
+                }
+            }
+        });
+        validateXMLButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try{
+                    Validator.validateXMLSchema(xmlValidatorTextArea.getText(), xmlXsdValidatorTextArea.getText());
+                    showMessageDialog(null, "Congrats, Valid XML");
+                }
+                catch (Exception ex){
+                    showMessageDialog(null, "Oops, INVALID XML.. please check stacktrace \n\n " + ex.getMessage());
                 }
             }
         });

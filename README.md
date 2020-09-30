@@ -29,8 +29,7 @@ and so on...
 
 ### Validators
 - [x] JSON Validator
-- [ ] HTML Validator
-- [ ] XML Validator (XSD)
+- [x] XML Validator (XSD)
 - [ ] XPath Tester
 - [ ] RegEx Tester
 - [ ] Cron Expression Generator
