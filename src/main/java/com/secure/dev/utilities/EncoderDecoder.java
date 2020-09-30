@@ -1,4 +1,4 @@
-package com.secure.dev.utilities;
+package main.java.com.secure.dev.utilities;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

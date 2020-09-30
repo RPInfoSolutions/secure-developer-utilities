@@ -1,4 +1,4 @@
-package com.secure.dev.utilities;
+package main.java.com.secure.dev.utilities;
 
 import org.everit.json.schema.Schema;
 import org.everit.json.schema.loader.SchemaLoader;
@@ -6,7 +6,6 @@ import org.json.JSONObject;
 import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;
-import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.SchemaFactory;
 import java.io.IOException;

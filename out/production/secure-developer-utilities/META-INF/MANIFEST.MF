@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: com.secure.dev.utilities.App
+Main-Class: main.java.com.secure.dev.utilities.App
 
