@@ -28,7 +28,7 @@ and so on...
 - [x] XML Minifier
 
 ### Validators
-- [ ] JSON Validator
+- [x] JSON Validator
 - [ ] HTML Validator
 - [ ] XML Validator (XSD)
 - [ ] XPath Tester

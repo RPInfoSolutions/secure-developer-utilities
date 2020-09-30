@@ -11,6 +11,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 public class App {
     private JPanel mainPanel;
@@ -45,6 +46,10 @@ public class App {
     private JTextArea xmlMinifierTextArea;
     private JButton formatXMLButton;
     private JButton minifyXMLButton;
+    private JPanel jsonValidator;
+    private JTextArea jsonValidatorTextArea;
+    private JButton validateJSONButton;
+    private JTextArea jsonValidatorSchemaTextArea;
 
     public App() {
 
@@ -104,6 +109,10 @@ public class App {
                         }
                         case "XML Minifier": {
                             layout.show(switchPanel, "Card9");
+                            break;
+                        }
+                        case "JSON Validator": {
+                            layout.show(switchPanel, "Card10");
                             break;
                         }
                         default: {
@@ -173,6 +182,18 @@ public class App {
                     xmlMinifierTextArea.setText(Converter.minifyXml(xmlMinifierTextArea.getText()));
                 } catch (Exception transformerException) {
                     transformerException.printStackTrace();
+                }
+            }
+        });
+        validateJSONButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try{
+                    Validator.validateJSON(jsonValidatorTextArea.getText(), jsonValidatorSchemaTextArea.getText());
+                    showMessageDialog(null, "Congrats, Valid JSON");
+                }
+                catch (Exception ex){
+                    showMessageDialog(null, "Oops, INVALID JSON.. please check stacktrace \n\n " + ex.getMessage());
                 }
             }
         });
