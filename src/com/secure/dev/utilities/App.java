@@ -115,7 +115,7 @@ public class App {
                             layout.show(switchPanel, "Card9");
                             break;
                         }
-                        case "JSON Validator": {
+                        case "JSON Schema Validator": {
                             layout.show(switchPanel, "Card10");
                             break;
                         }
