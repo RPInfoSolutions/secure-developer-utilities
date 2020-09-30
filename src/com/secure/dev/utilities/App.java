@@ -1,11 +1,16 @@
 package com.secure.dev.utilities;
 
+import org.xml.sax.SAXException;
+
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class App {
     private JPanel mainPanel;
@@ -34,6 +39,12 @@ public class App {
     private JTextArea jsonMinifiertextArea;
     private JButton minifyJSONButton;
     private JPanel jsonMinifier;
+    private JPanel xmlFormatter;
+    private JPanel xmlMinifier;
+    private JTextArea xmlFormattertextArea;
+    private JTextArea xmlMinifierTextArea;
+    private JButton formatXMLButton;
+    private JButton minifyXMLButton;
 
     public App() {
 
@@ -83,8 +94,16 @@ public class App {
                             layout.show(switchPanel, "Card6");
                             break;
                         }
-                        case "XML Formatter": {
+                        case "JSON Minifier": {
                             layout.show(switchPanel, "Card7");
+                            break;
+                        }
+                        case "XML Formatter": {
+                            layout.show(switchPanel, "Card8");
+                            break;
+                        }
+                        case "XML Minifier": {
+                            layout.show(switchPanel, "Card9");
                             break;
                         }
                         default: {
@@ -135,6 +154,26 @@ public class App {
             @Override
             public void actionPerformed(ActionEvent e) {
                 jsonMinifiertextArea.setText(Converter.minifyJson(jsonMinifiertextArea.getText()));
+            }
+        });
+        formatXMLButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    xmlFormattertextArea.setText(Converter.formatXml(xmlFormattertextArea.getText()));
+                } catch (Exception transformerException) {
+                    transformerException.printStackTrace();
+                }
+            }
+        });
+        minifyXMLButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    xmlMinifierTextArea.setText(Converter.minifyXml(xmlMinifierTextArea.getText()));
+                } catch (Exception transformerException) {
+                    transformerException.printStackTrace();
+                }
             }
         });
     }
