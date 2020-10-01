@@ -1,5 +1,7 @@
 package com.secure.dev.utilities;
 
+import com.secure.dev.popup.CommonPopupMenu;
+
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -82,11 +84,38 @@ public class App {
     private JButton unescapeJavascriptButton;
     private JButton unescapeJSONButton;
     private JButton unescapeCSVButton;
-    private JTextPane textPane1;
+    private JTextPane logConsole;
     private JScrollPane menuList;
 
     public App() {
 
+        CommonPopupMenu.addPopupMenu(urlEncoderDecoderArea);
+        CommonPopupMenu.addPopupMenu(base64Area);
+        CommonPopupMenu.addPopupMenu(xmlToJsonTextArea);
+        CommonPopupMenu.addPopupMenu(jsonToXmlTextArea);
+        CommonPopupMenu.addPopupMenu(epochTimestampToDateTextArea);
+        CommonPopupMenu.addPopupMenu(jsonFormatterTextArea);
+        CommonPopupMenu.addPopupMenu(jsonMinifiertextArea);
+        CommonPopupMenu.addPopupMenu(xmlFormattertextArea);
+        CommonPopupMenu.addPopupMenu(xmlMinifierTextArea);
+        CommonPopupMenu.addPopupMenu(jsonValidatorTextArea);
+        CommonPopupMenu.addPopupMenu(jsonValidatorSchemaTextArea);
+        CommonPopupMenu.addPopupMenu(xmlValidatorTextArea);
+        CommonPopupMenu.addPopupMenu(xmlXsdValidatorTextArea);
+        CommonPopupMenu.addPopupMenu(htmlEscapeTextArea);
+        CommonPopupMenu.addPopupMenu(xmlEscapeTextArea);
+        CommonPopupMenu.addPopupMenu(javaEscapeTextArea);
+        CommonPopupMenu.addPopupMenu(jsonEscapeTextArea);
+        CommonPopupMenu.addPopupMenu(csvEscapeTextArea);
+        //CommonPopupMenu.addPopupMenu(logConsole);
+        /*CommonPopupMenu.addPopupMenu();
+        CommonPopupMenu.addPopupMenu();
+        CommonPopupMenu.addPopupMenu();
+        CommonPopupMenu.addPopupMenu();
+        CommonPopupMenu.addPopupMenu();
+        CommonPopupMenu.addPopupMenu();
+        CommonPopupMenu.addPopupMenu();
+*/
         decodeUrlButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

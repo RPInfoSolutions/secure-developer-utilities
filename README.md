@@ -35,13 +35,12 @@ and so on...
 - [ ] Cron Expression Generator
 
 ### String Utilities
-- [ ] String Utilities
-- [ ] HTML Escape
-- [ ] XML Escape
-- [ ] Java and .Net Escape
-- [ ] JSON Escape
-- [ ] CSV Escape
-- [ ] SQL Escape
+- [x] HTML Escape
+- [x] XML Escape
+- [x] Java and .Net Escape
+- [x] JSON Escape
+- [x] Javascript Escape
+- [x] CSV Escape
 
 ### Cryptography
 - [ ] Message Digester (MD5, SHA-256, SHA-512)
@@ -49,4 +48,3 @@ and so on...
 - [ ] MD5 Generator
 - [ ] SHA-256 Generator
 - [ ] SHA-512 Generator
-- [ ] Network Ninja
