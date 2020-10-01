@@ -50,6 +50,35 @@ public class App {
     private JTextArea xmlValidatorTextArea;
     private JTextArea xmlXsdValidatorTextArea;
     private JButton validateXMLButton;
+    private JPanel xPathTester;
+    private JPanel regexTester;
+    private JPanel cronGenerator;
+    private JPanel htmlEscape;
+    private JPanel xmlEscape;
+    private JPanel javaEscape;
+    private JPanel javascriptEscape;
+    private JPanel jsonEscape;
+    private JPanel csvEscape;
+    private JPanel sqlEscape;
+    private JTextArea htmlEscapeTextArea;
+    private JButton escapeHTMLButton;
+    private JTextArea xmlEscapeTextArea;
+    private JButton escapeXMLButton;
+    private JTextArea javaEscapeTextArea;
+    private JButton javaEscapeButton;
+    private JTextArea javascriptTextArea;
+    private JButton javascriptEscapeButton;
+    private JTextArea jsonEscapeTextArea;
+    private JButton JSONEscapeButton;
+    private JTextArea csvEscapeTextArea;
+    private JButton CSVEscapeButton;
+    private JTextArea sqlEscapeTextArea;
+    private JButton SQLEscapeButton;
+    private JPanel messageDigester;
+    private JPanel hmacGenerator;
+    private JPanel md5Generator;
+    private JPanel sha256Generator;
+    private JPanel sha512Generator;
 
     public App() {
 
@@ -117,6 +146,66 @@ public class App {
                         }
                         case "XML Validator (XSD)": {
                             layout.show(switchPanel, "Card11");
+                            break;
+                        }
+                        case "XPath Tester": {
+                            layout.show(switchPanel, "Card12");
+                            break;
+                        }
+                        case "RegEx Tester": {
+                            layout.show(switchPanel, "Card13");
+                            break;
+                        }
+                        case "Cron Expression Generator": {
+                            layout.show(switchPanel, "Card14");
+                            break;
+                        }
+                        case "HTML Escape": {
+                            layout.show(switchPanel, "Card15");
+                            break;
+                        }
+                        case "XML Escape": {
+                            layout.show(switchPanel, "Card16");
+                            break;
+                        }
+                        case "Java and .Net Escape": {
+                            layout.show(switchPanel, "Card17");
+                            break;
+                        }
+                        case "JavaScript Escape": {
+                            layout.show(switchPanel, "Card18");
+                            break;
+                        }
+                        case "JSON Escape": {
+                            layout.show(switchPanel, "Card19");
+                            break;
+                        }
+                        case "CSV Escape": {
+                            layout.show(switchPanel, "Card20");
+                            break;
+                        }
+                        case "SQL Escape": {
+                            layout.show(switchPanel, "Card21");
+                            break;
+                        }
+                        case "Message Digester (MD5, SHA-256, SHA-512)": {
+                            layout.show(switchPanel, "Card22");
+                            break;
+                        }
+                        case "HMAC Generator": {
+                            layout.show(switchPanel, "Card23");
+                            break;
+                        }
+                        case "MD5 Generator": {
+                            layout.show(switchPanel, "Card24");
+                            break;
+                        }
+                        case "SHA-256 Generator": {
+                            layout.show(switchPanel, "Card25");
+                            break;
+                        }
+                        case "SHA-512 Generator": {
+                            layout.show(switchPanel, "Card26");
                             break;
                         }
                         default: {
@@ -211,6 +300,53 @@ public class App {
                 catch (Exception ex){
                     showMessageDialog(null, "Oops, INVALID XML.. please check stacktrace \n\n " + ex.getMessage());
                 }
+            }
+        });
+        escapeHTMLButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                htmlEscapeTextArea.setText(Escaper.escapeHTMLText(htmlEscapeTextArea.getText()));
+            }
+        });
+        escapeXMLButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                xmlEscapeTextArea.setText(Escaper.escapeXMLText(xmlEscapeTextArea.getText()));
+            }
+        });
+
+        javaEscapeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                javaEscapeTextArea.setText(Escaper.escapeJavaText(javaEscapeTextArea.getText()));
+            }
+        });
+
+        javascriptEscapeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                javascriptTextArea.setText(Escaper.escapeJavascriptText(javascriptTextArea.getText()));
+            }
+        });
+
+        JSONEscapeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jsonEscapeTextArea.setText(Escaper.escapeJSONText(jsonEscapeTextArea.getText()));
+            }
+        });
+
+        CSVEscapeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                csvEscapeTextArea.setText(Escaper.escapeCSVText(csvEscapeTextArea.getText()));
+            }
+        });
+
+        SQLEscapeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                sqlEscapeTextArea.setText(Escaper.escapeSQLText(sqlEscapeTextArea.getText()));
             }
         });
     }
