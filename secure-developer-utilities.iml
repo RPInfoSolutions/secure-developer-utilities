@@ -9,6 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="org.json:json:20200518" level="project" />
     <orderEntry type="library" name="org.everit.json:org.everit.json.schema:1.5.1" level="project" />
-    <orderEntry type="library" name="commons-lang:commons-lang:2.6" level="project" />
+    <orderEntry type="library" name="org.apache.commons:commons-text:1.9" level="project" />
   </component>
 </module>

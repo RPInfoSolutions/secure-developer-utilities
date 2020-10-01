@@ -59,7 +59,6 @@ public class App {
     private JPanel javascriptEscape;
     private JPanel jsonEscape;
     private JPanel csvEscape;
-    private JPanel sqlEscape;
     private JTextArea htmlEscapeTextArea;
     private JButton escapeHTMLButton;
     private JTextArea xmlEscapeTextArea;
@@ -72,13 +71,17 @@ public class App {
     private JButton JSONEscapeButton;
     private JTextArea csvEscapeTextArea;
     private JButton CSVEscapeButton;
-    private JTextArea sqlEscapeTextArea;
-    private JButton SQLEscapeButton;
     private JPanel messageDigester;
     private JPanel hmacGenerator;
     private JPanel md5Generator;
     private JPanel sha256Generator;
     private JPanel sha512Generator;
+    private JButton unescapeHTMLButton;
+    private JButton unescapeXMLButton;
+    private JButton unescapeJavaButton;
+    private JButton unescapeJavascriptButton;
+    private JButton unescapeJSONButton;
+    private JButton unescapeCSVButton;
 
     public App() {
 
@@ -184,10 +187,10 @@ public class App {
                             layout.show(switchPanel, "Card20");
                             break;
                         }
-                        case "SQL Escape": {
+                        /*case "SQL Escape": {
                             layout.show(switchPanel, "Card21");
                             break;
-                        }
+                        }*/
                         case "Message Digester (MD5, SHA-256, SHA-512)": {
                             layout.show(switchPanel, "Card22");
                             break;
@@ -305,48 +308,84 @@ public class App {
         escapeHTMLButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                htmlEscapeTextArea.setText(Escaper.escapeHTMLText(htmlEscapeTextArea.getText()));
+                htmlEscapeTextArea.setText(EscaperUnescaper.escapeHTMLText(htmlEscapeTextArea.getText()));
             }
         });
         escapeXMLButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                xmlEscapeTextArea.setText(Escaper.escapeXMLText(xmlEscapeTextArea.getText()));
+                xmlEscapeTextArea.setText(EscaperUnescaper.escapeXMLText(xmlEscapeTextArea.getText()));
             }
         });
 
         javaEscapeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                javaEscapeTextArea.setText(Escaper.escapeJavaText(javaEscapeTextArea.getText()));
+                javaEscapeTextArea.setText(EscaperUnescaper.escapeJavaText(javaEscapeTextArea.getText()));
             }
         });
 
         javascriptEscapeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                javascriptTextArea.setText(Escaper.escapeJavascriptText(javascriptTextArea.getText()));
+                javascriptTextArea.setText(EscaperUnescaper.escapeJavascriptText(javascriptTextArea.getText()));
             }
         });
 
         JSONEscapeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                jsonEscapeTextArea.setText(Escaper.escapeJSONText(jsonEscapeTextArea.getText()));
+                jsonEscapeTextArea.setText(EscaperUnescaper.escapeJSONText(jsonEscapeTextArea.getText()));
             }
         });
 
         CSVEscapeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                csvEscapeTextArea.setText(Escaper.escapeCSVText(csvEscapeTextArea.getText()));
+                csvEscapeTextArea.setText(EscaperUnescaper.escapeCSVText(csvEscapeTextArea.getText()));
             }
         });
 
-        SQLEscapeButton.addActionListener(new ActionListener() {
+        /*SQLEscapeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                sqlEscapeTextArea.setText(Escaper.escapeSQLText(sqlEscapeTextArea.getText()));
+                sqlEscapeTextArea.setText(EscaperUnescaper.escapeSQLText(sqlEscapeTextArea.getText()));
+            }
+        });*/
+        unescapeHTMLButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                htmlEscapeTextArea.setText(EscaperUnescaper.unescapeHTMLText(htmlEscapeTextArea.getText()));
+            }
+        });
+        unescapeXMLButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                xmlEscapeTextArea.setText(EscaperUnescaper.unescapeXMLText(xmlEscapeTextArea.getText()));
+            }
+        });
+        unescapeJavaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                javaEscapeTextArea.setText(EscaperUnescaper.unescapeJavaText(javaEscapeTextArea.getText()));
+            }
+        });
+        unescapeJavascriptButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                javascriptTextArea.setText(EscaperUnescaper.unescapeJavascriptText(javascriptTextArea.getText()));
+            }
+        });
+        unescapeJSONButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jsonEscapeTextArea.setText(EscaperUnescaper.unescapeJSONText(jsonEscapeTextArea.getText()));
+            }
+        });
+        unescapeCSVButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                csvEscapeTextArea.setText(EscaperUnescaper.unescapeCSVText(csvEscapeTextArea.getText()));
             }
         });
     }

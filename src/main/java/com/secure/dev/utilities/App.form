@@ -561,7 +561,7 @@
                 <border type="none"/>
                 <children/>
               </grid>
-              <grid id="b5f48" binding="htmlEscape" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="b5f48" binding="htmlEscape" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <card name="Card15"/>
@@ -595,9 +595,18 @@
                       <text value="Escape HTML"/>
                     </properties>
                   </component>
+                  <component id="13384" class="javax.swing.JButton" binding="unescapeHTMLButton" default-binding="true">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="14"/>
+                      <text value="Unescape HTML"/>
+                    </properties>
+                  </component>
                 </children>
               </grid>
-              <grid id="5cd03" binding="xmlEscape" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="5cd03" binding="xmlEscape" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <card name="Card16"/>
@@ -631,9 +640,18 @@
                       <text value="Escape XML"/>
                     </properties>
                   </component>
+                  <component id="1153a" class="javax.swing.JButton" binding="unescapeXMLButton" default-binding="true">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="14"/>
+                      <text value="Unescape XML"/>
+                    </properties>
+                  </component>
                 </children>
               </grid>
-              <grid id="8b010" binding="javaEscape" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="8b010" binding="javaEscape" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <card name="Card17"/>
@@ -667,9 +685,18 @@
                       <text value="Java Escape"/>
                     </properties>
                   </component>
+                  <component id="6248e" class="javax.swing.JButton" binding="unescapeJavaButton" default-binding="true">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="14"/>
+                      <text value="Unescape Java"/>
+                    </properties>
+                  </component>
                 </children>
               </grid>
-              <grid id="f42b8" binding="javascriptEscape" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="f42b8" binding="javascriptEscape" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <card name="Card18"/>
@@ -703,9 +730,18 @@
                       <text value="Javascript Escape"/>
                     </properties>
                   </component>
+                  <component id="7ec33" class="javax.swing.JButton" binding="unescapeJavascriptButton" default-binding="true">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="14"/>
+                      <text value="Unescape Javascript"/>
+                    </properties>
+                  </component>
                 </children>
               </grid>
-              <grid id="94c9e" binding="jsonEscape" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="94c9e" binding="jsonEscape" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <card name="Card19"/>
@@ -740,9 +776,18 @@
                       <text value="JSON Escape"/>
                     </properties>
                   </component>
+                  <component id="8b40d" class="javax.swing.JButton" binding="unescapeJSONButton" default-binding="true">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="14"/>
+                      <text value="Unescape JSON"/>
+                    </properties>
+                  </component>
                 </children>
               </grid>
-              <grid id="3853a" binding="csvEscape" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="3853a" binding="csvEscape" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <card name="Card20"/>
@@ -776,40 +821,13 @@
                       <text value="CSV Escape"/>
                     </properties>
                   </component>
-                </children>
-              </grid>
-              <grid id="47a2c" binding="sqlEscape" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
-                <constraints>
-                  <card name="Card21"/>
-                </constraints>
-                <properties/>
-                <border type="none"/>
-                <children>
-                  <scrollpane id="eb2b8">
+                  <component id="25ea5" class="javax.swing.JButton" binding="unescapeCSVButton" default-binding="true">
                     <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties/>
-                    <border type="none"/>
-                    <children>
-                      <component id="6866f" class="javax.swing.JTextArea" binding="sqlEscapeTextArea">
-                        <constraints/>
-                        <properties>
-                          <background color="-775"/>
-                          <font size="14"/>
-                          <lineWrap value="true"/>
-                        </properties>
-                      </component>
-                    </children>
-                  </scrollpane>
-                  <component id="3f6c6" class="javax.swing.JButton" binding="SQLEscapeButton" default-binding="true">
-                    <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <font size="14"/>
-                      <text value="SQL Escape"/>
+                      <text value="Unescape CSV"/>
                     </properties>
                   </component>
                 </children>
