@@ -107,7 +107,7 @@ public class App {
         CommonPopupMenu.addPopupMenu(javaEscapeTextArea);
         CommonPopupMenu.addPopupMenu(jsonEscapeTextArea);
         CommonPopupMenu.addPopupMenu(csvEscapeTextArea);
-        //CommonPopupMenu.addPopupMenu(logConsole);
+        CommonPopupMenu.addPopupMenu(logConsole);
         /*CommonPopupMenu.addPopupMenu();
         CommonPopupMenu.addPopupMenu();
         CommonPopupMenu.addPopupMenu();
@@ -116,18 +116,6 @@ public class App {
         CommonPopupMenu.addPopupMenu();
         CommonPopupMenu.addPopupMenu();
 */
-        decodeUrlButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                urlEncoderDecoderArea.setText(EncoderDecoder.decodeUrlValue(urlEncoderDecoderArea.getText()));
-            }
-        });
-        encodeUrlButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                urlEncoderDecoderArea.setText(EncoderDecoder.encodeUrlValue(urlEncoderDecoderArea.getText()));
-            }
-        });
 
         list1.addListSelectionListener(new ListSelectionListener() {
             @Override
@@ -250,65 +238,125 @@ public class App {
                 }
             }
         });
+
+        decodeUrlButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try{
+                    urlEncoderDecoderArea.setText(EncoderDecoder.decodeUrlValue(urlEncoderDecoderArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
+            }
+        });
+        encodeUrlButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try{
+                    urlEncoderDecoderArea.setText(EncoderDecoder.encodeUrlValue(urlEncoderDecoderArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
+            }
+        });
         encodeToBase64Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                base64Area.setText(EncoderDecoder.encodeToBase64(base64Area.getText()));
+                try{
+                    base64Area.setText(EncoderDecoder.encodeToBase64(base64Area.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
         decodeFromBase64Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                base64Area.setText(EncoderDecoder.decodeFromBase64(base64Area.getText()));
+                try{
+                    base64Area.setText(EncoderDecoder.decodeFromBase64(base64Area.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
         convertToXML.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                jsonToXmlTextArea.setText(Converter.convertJsonToXml(jsonToXmlTextArea.getText()));
+                try{
+                    jsonToXmlTextArea.setText(Converter.convertJsonToXml(jsonToXmlTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
         convertToJSONButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                xmlToJsonTextArea.setText(Converter.convertXmlToJson(xmlToJsonTextArea.getText()));
+                try{
+                    xmlToJsonTextArea.setText(Converter.convertXmlToJson(xmlToJsonTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
         epochTimestampToDateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                epochTimestampToDateTextArea.setText(Converter.convertEpochTimestampToDate(Long.parseLong(epochTimestampToDateTextArea.getText())));
+                try{
+                    epochTimestampToDateTextArea.setText(Converter.convertEpochTimestampToDate(Long.parseLong(epochTimestampToDateTextArea.getText())));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
         formatJSONButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                jsonFormatterTextArea.setText(Converter.formatJson(jsonFormatterTextArea.getText()));
+                try{
+                    jsonFormatterTextArea.setText(Converter.formatJson(jsonFormatterTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
         minifyJSONButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                jsonMinifiertextArea.setText(Converter.minifyJson(jsonMinifiertextArea.getText()));
+                try{
+                    jsonMinifiertextArea.setText(Converter.minifyJson(jsonMinifiertextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
         formatXMLButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
+                try{
                     xmlFormattertextArea.setText(Converter.formatXml(xmlFormattertextArea.getText()));
-                } catch (Exception transformerException) {
-                    transformerException.printStackTrace();
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
                 }
             }
         });
         minifyXMLButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
+                try{
                     xmlMinifierTextArea.setText(Converter.minifyXml(xmlMinifierTextArea.getText()));
-                } catch (Exception transformerException) {
-                    transformerException.printStackTrace();
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
                 }
             }
         });
@@ -319,7 +367,8 @@ public class App {
                     Validator.validateJSON(jsonValidatorTextArea.getText(), jsonValidatorSchemaTextArea.getText());
                     showMessageDialog(null, "Congrats, Valid JSON");
                 }
-                catch (Exception ex){
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
                     showMessageDialog(null, "Oops, INVALID JSON.. please check stacktrace \n\n " + ex.getMessage());
                 }
             }
@@ -331,7 +380,8 @@ public class App {
                     Validator.validateXMLSchema(xmlValidatorTextArea.getText(), xmlXsdValidatorTextArea.getText());
                     showMessageDialog(null, "Congrats, Valid XML");
                 }
-                catch (Exception ex){
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
                     showMessageDialog(null, "Oops, INVALID XML.. please check stacktrace \n\n " + ex.getMessage());
                 }
             }
@@ -339,41 +389,71 @@ public class App {
         escapeHTMLButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                htmlEscapeTextArea.setText(EscaperUnescaper.escapeHTMLText(htmlEscapeTextArea.getText()));
+                try{
+                    htmlEscapeTextArea.setText(EscaperUnescaper.escapeHTMLText(htmlEscapeTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
         escapeXMLButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                xmlEscapeTextArea.setText(EscaperUnescaper.escapeXMLText(xmlEscapeTextArea.getText()));
+                try{
+                    xmlEscapeTextArea.setText(EscaperUnescaper.escapeXMLText(xmlEscapeTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
 
         javaEscapeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                javaEscapeTextArea.setText(EscaperUnescaper.escapeJavaText(javaEscapeTextArea.getText()));
+                try{
+                    javaEscapeTextArea.setText(EscaperUnescaper.escapeJavaText(javaEscapeTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
 
         javascriptEscapeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                javascriptTextArea.setText(EscaperUnescaper.escapeJavascriptText(javascriptTextArea.getText()));
+                try{
+                    javascriptTextArea.setText(EscaperUnescaper.escapeJavascriptText(javascriptTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
 
         JSONEscapeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                jsonEscapeTextArea.setText(EscaperUnescaper.escapeJSONText(jsonEscapeTextArea.getText()));
+                try{
+                    jsonEscapeTextArea.setText(EscaperUnescaper.escapeJSONText(jsonEscapeTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
 
         CSVEscapeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                csvEscapeTextArea.setText(EscaperUnescaper.escapeCSVText(csvEscapeTextArea.getText()));
+                try{
+                    csvEscapeTextArea.setText(EscaperUnescaper.escapeCSVText(csvEscapeTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
 
@@ -386,37 +466,67 @@ public class App {
         unescapeHTMLButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                htmlEscapeTextArea.setText(EscaperUnescaper.unescapeHTMLText(htmlEscapeTextArea.getText()));
+                try{
+                    htmlEscapeTextArea.setText(EscaperUnescaper.unescapeHTMLText(htmlEscapeTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
         unescapeXMLButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                xmlEscapeTextArea.setText(EscaperUnescaper.unescapeXMLText(xmlEscapeTextArea.getText()));
+                try{
+                    xmlEscapeTextArea.setText(EscaperUnescaper.unescapeXMLText(xmlEscapeTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
         unescapeJavaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                javaEscapeTextArea.setText(EscaperUnescaper.unescapeJavaText(javaEscapeTextArea.getText()));
+                try{
+                    javaEscapeTextArea.setText(EscaperUnescaper.unescapeJavaText(javaEscapeTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
         unescapeJavascriptButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                javascriptTextArea.setText(EscaperUnescaper.unescapeJavascriptText(javascriptTextArea.getText()));
+                try{
+                    javascriptTextArea.setText(EscaperUnescaper.unescapeJavascriptText(javascriptTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
         unescapeJSONButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                jsonEscapeTextArea.setText(EscaperUnescaper.unescapeJSONText(jsonEscapeTextArea.getText()));
+                try{
+                    jsonEscapeTextArea.setText(EscaperUnescaper.unescapeJSONText(jsonEscapeTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
         unescapeCSVButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                csvEscapeTextArea.setText(EscaperUnescaper.unescapeCSVText(csvEscapeTextArea.getText()));
+                try{
+                    csvEscapeTextArea.setText(EscaperUnescaper.unescapeCSVText(csvEscapeTextArea.getText()));
+                }
+                catch(Exception ex){
+                    logConsole.setText(ex.getMessage());
+                }
             }
         });
     }
