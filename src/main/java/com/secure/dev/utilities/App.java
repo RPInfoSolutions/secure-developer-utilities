@@ -82,6 +82,8 @@ public class App {
     private JButton unescapeJavascriptButton;
     private JButton unescapeJSONButton;
     private JButton unescapeCSVButton;
+    private JTextPane textPane1;
+    private JScrollPane menuList;
 
     public App() {
 
