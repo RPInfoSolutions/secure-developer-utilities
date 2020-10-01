@@ -1,4 +1,4 @@
-package main.java.com.secure.dev.utilities;
+package com.secure.dev.utilities;
 
 import org.everit.json.schema.Schema;
 import org.everit.json.schema.loader.SchemaLoader;

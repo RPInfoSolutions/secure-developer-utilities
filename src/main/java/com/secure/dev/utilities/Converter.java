@@ -1,4 +1,4 @@
-package main.java.com.secure.dev.utilities;
+package com.secure.dev.utilities;
 
 
 import org.json.JSONObject;
